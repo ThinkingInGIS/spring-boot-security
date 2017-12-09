@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>普通用户页面 (受 Spring Security 保护, 需要用户权限)</h1>
+
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" class="btn btn-danger" value="登出"/>
+        </form>
+
+    </div>
+
+</div>
+<!-- /.container -->
+<div class="container">
+    <footer>
+        <p>
+            © <a >ThinkingInGIS</a> 2017
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>

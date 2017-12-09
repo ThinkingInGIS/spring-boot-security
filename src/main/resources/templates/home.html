@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/main.css}"/>
+   	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="starter-template">
+        <h1>Spring Boot + Thymeleaf + Spring Security 示例</h1>
+        <h2>1. 打开 <a th:href="@{/admin}">管理员页面 (受 Spring Security 保护, 需要管理员权限)</a></h2>
+        <h2>2. 打开 <a th:href="@{/user}">用户页面 (受 Spring Security 保护, 需要用户权限)</a></h2>
+        <h2>3. 打开 <a th:href="@{/about}">游客页面</a></h2>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="fragments/footer :: footer"/>
+
+</body>
+</html>
