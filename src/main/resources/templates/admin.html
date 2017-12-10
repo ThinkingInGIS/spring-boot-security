@@ -7,20 +7,14 @@
 <body>
 
 <div class="container">
-
     <div class="starter-template">
         <h1>GORGEOUS! 管理员页面 (受 Spring Security 保护, 需要管理员权限)</h1>
-
         <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
         <form th:action="@{/logout}" method="post">
             <input type="submit" class="btn btn-danger" value="登出"/>
         </form>
-
     </div>
-
 </div>
-<!-- /.container -->
-
 <div class="container">
     <footer>
         <p>
@@ -28,6 +22,5 @@
         </p>
     </footer>
 </div>
-
 </body>
 </html>

@@ -5,21 +5,16 @@
     <script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
-
+<div th:replace="fragments/header :: header"></div>
 <div class="container">
-
     <div class="starter-template">
         <h1>普通用户页面 (受 Spring Security 保护, 需要用户权限)</h1>
-
         <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
         <form th:action="@{/logout}" method="post">
             <input type="submit" class="btn btn-danger" value="登出"/>
         </form>
-
     </div>
-
 </div>
-<!-- /.container -->
 <div class="container">
     <footer>
         <p>
@@ -27,6 +22,5 @@
         </p>
     </footer>
 </div>
-
 </body>
 </html>

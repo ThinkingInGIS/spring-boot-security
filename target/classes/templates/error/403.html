@@ -2,32 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    
     <title>403</title>
-
     <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
-
+<div th:replace="fragments/header :: header"></div>
 <div class="container">
-
     <div class="starter-template">
-        <h1>403 - Access is denied</h1>
+        <h1>403 - 没有访问权限</h1>
         <div th:inline="text">Hello '[[${#httpServletRequest.remoteUser}]]',
-                you do not have permission to access this page.</div>
+                你没有权限访问此页面.</div>
     </div>
-
 </div>
 <!-- /.container -->
-
-<div class="container">
-    <footer>
-        <p>
-            © <a >ThinkingInGIS</a> 2017
-        </p>
-    </footer>
-</div>
+<div th:replace="fragments/footer :: footer"></div>
 
 </body>
 </html>
