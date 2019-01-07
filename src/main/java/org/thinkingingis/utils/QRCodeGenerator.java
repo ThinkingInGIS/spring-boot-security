@@ -26,16 +26,16 @@ public class QRCodeGenerator {
 		
 	}
 	
-//	public static void main(String[] args) {
-//        try {
-//            generateQRCodeImage("This is my first QR Code", 350, 350, QR_CODE_IMAGE_PATH);
-//        } catch (WriterException e) {
-//            System.out.println("Could not generate QR Code, WriterException :: " + e.getMessage());
-//        } catch (IOException e) {
-//            System.out.println("Could not generate QR Code, IOException :: " + e.getMessage());
-//        }
-//		
-//	}
+	public static void main(String[] args) {
+        try {
+            generateQRCodeImage("This is my first QR Code", 350, 350, QR_CODE_IMAGE_PATH);
+        } catch (WriterException e) {
+            System.out.println("Could not generate QR Code, WriterException :: " + e.getMessage());
+        } catch (IOException e) {
+            System.out.println("Could not generate QR Code, IOException :: " + e.getMessage());
+        }
+		
+	}
 	
     public static byte[] getQRCodeImage(String text, int width, int height) throws WriterException, IOException {
         QRCodeWriter qrCodeWriter = new QRCodeWriter();

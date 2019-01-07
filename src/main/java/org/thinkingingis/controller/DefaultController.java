@@ -74,6 +74,7 @@ public class DefaultController {
 			System.out.println("Could not generate QR Code, WriterException :: " + e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {
+			
 			System.out.println("Could not generate QR Code, IOException :: " + e.getMessage());
 		} 
 
